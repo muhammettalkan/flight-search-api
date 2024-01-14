@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: flight-search
+  datasource:
+    url: jdbc:mysql://localhost:3306/flight?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 985263
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  queries:
+    users-query: select username, password, enabled from users where username=?
+
+jwt.key : oKqlUspg0aKZfH5ErbfmubfvRPPRFD9b2gvI+mggmGFIVXLNXf/9wgJsTpFnx6PAZLGFEWNefNqFAtk5voGQhvoDpbpw3JKe63MqrWQE8jwFYkuOwa9GZO2yqdce1WiIsUV8ILjhb4MqFj15n1/916WxJVPJGypjicdVpEHOGXE=
